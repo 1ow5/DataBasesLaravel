@@ -33,6 +33,14 @@
                             <p>{{ $product->discription }}</p>
                             <p>{{ $product->price }}</p>
                         </div>
+                        <div class="ml-auto">
+                            <a href="">Редактировать</a>
+                            <form action="" method="post">
+                                @csrf
+                                @method('delete')
+                                <input type="submit" value="Удалить">
+                            </form>
+                        </div>
                     </div>
                 @endforeach
             </div>
