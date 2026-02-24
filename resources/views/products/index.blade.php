@@ -27,7 +27,9 @@
                         <img src="" alt="">
                         <div>
                             <img class="w-28 h-full aspect-1 mr-4" src="{{ Vite::asset($product->path_img) }}" alt="{{ $product->title }}">
-                            <h3>{{ $product->title }}</h3>
+                            <a href="{{route('products.show', ['product'=>$product])}}">
+                                <h3>{{ $product->title }}</h3>
+                            </a>
                             <p>{{ $product->discription }}</p>
                             <p>{{ $product->price }}</p>
                         </div>
